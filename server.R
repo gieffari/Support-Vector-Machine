@@ -8,8 +8,8 @@ library("wordcloud")
 library("RColorBrewer")
 library(RMariaDB)
 
-storiesDb <- dbConnect(RMariaDB::MariaDB(), user='appgarden_gieffa', password='#gi1920#', 
-                       dbname='appgarden_gieffa', host='appgarden.xyz')
+storiesDb <- dbConnect(RMariaDB::MariaDB(), user='xxxx', password='xxxx', 
+                       dbname='xxxx', host='xxxxx')
 dbListTables(storiesDb)
 query<-paste("SELECT id,label, tweet, alasan_kata from twitter ORDER by id" ,sep="")
 print(query)
