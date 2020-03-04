@@ -1,0 +1,11 @@
+library(twitteR)
+library(rtweet)
+consumer_key <- "NluAQ3tei7K7tIjtvdoXs71by"
+consumer_secret <- "rIBafGf2n3hfevMzdEnMstxhzoJDWQwZlXyj6LPaxny6HgJaAH"
+access_token <- "700602843942748160-h6GWV3BIS83I9vUkZzT2ZYMC2T8sAEW"
+access_secret <- "sWNqLWhdChTk8gMH0txd2rIGAZv41YnbVfxv8InLajUum"
+setup_twitter_oauth("NluAQ3tei7K7tIjtvdoXs71by","rIBafGf2n3hfevMzdEnMstxhzoJDWQwZlXyj6LPaxny6HgJaAH",
+                    "700602843942748160-h6GWV3BIS83I9vUkZzT2ZYMC2T8sAEW","sWNqLWhdChTk8gMH0txd2rIGAZv41YnbVfxv8InLajUum")
+tw = searchTwitter('Topik yang dicari', n = 200, since = '2019-07-01', retryOnRateLimit = 10e3)
+papua.df <- twListToDF(tw)
+View(papua.df)
